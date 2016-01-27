@@ -8,4 +8,28 @@ Fork this repo, add your solution and documentation on how to compile and run yo
 
 Obviously, we are looking for a fresh solution, not based on others' code.
 
+##Set GOPATH
+Go the the top directory and set the GOPATH using:
+```
+$ export GOPATH="$GOPATH":"$PWD"
+```
 
+##Build and Run the App
+Flags:<br>
+  * -f filename
+  * -b enable benchmarking
+
+```
+$ go build main.go
+$ ./main -f words.list -b
+Runtime: 169 ms
+Longest compound word: antidisestablishmentarianisms
+```
+
+##Test the App
+```
+$ cd src/lcwsolver
+$ go test
+PASS
+ok    lcwsolver 0.006s
+```
